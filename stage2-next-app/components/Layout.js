@@ -7,7 +7,7 @@ export default function Layout({ title, children }) {
       <AppBar position="sticky">
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Typography variant="h6" component="div">
-            AffordMed Notifications
+            Medical Notifications
           </Typography>
           <Box>
             <Button color="inherit" component={Link} href="/">
