@@ -49,5 +49,5 @@ http://localhost:3000
 
 ## Notes
 
-- The app uses `NEXT_PUBLIC_NOTIF_API_TOKEN` if provided for API access.
+- The app uses `API_TOKEN` if provided for API access.
 - The application is intentionally lightweight and production-ready for a small campus notification system.

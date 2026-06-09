@@ -1,10 +1,3 @@
-const API_BASE = 'http://4.224.186.213/evaluation-service/notifications';
-
-function getAuthHeaders() {
-  const token = process.env.NEXT_PUBLIC_NOTIF_API_TOKEN;
-  return token ? { Authorization: `Bearer ${token}` } : {};
-}
-
 export async function fetchNotifications({ limit = 20, page = 1, notificationType } = {}) {
   const params = new URLSearchParams();
   params.set('limit', limit);
@@ -12,10 +5,9 @@ export async function fetchNotifications({ limit = 20, page = 1, notificationTyp
   if (notificationType && notificationType !== 'All') {
     params.set('notification_type', notificationType);
   }
-  const response = await fetch(`${API_BASE}?${params.toString()}`, {
+  const response = await fetch(`/api/notifications?${params.toString()}`, {
     headers: {
-      'Content-Type': 'application/json',
-      ...getAuthHeaders()
+      'Content-Type': 'application/json'
     }
   });
   const body = await response.json();
