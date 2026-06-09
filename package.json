@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "NODE_ENV=development node src/server.js",
+    "stage1": "node src/stage1PriorityInbox.js",
     "test": "node src/server.js"
   },
   "dependencies": {
